@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>REGISTRO MAESTROS</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    box-shadow: 0 15px 20px #abb2b9;
+}
+h2{
+    font-size: 26px;
+    font-weight:600;
+    text-align: left;
+    color: rgb(139, 96, 238);
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label, .gender-title{
+    width: 95%;
+    color: #2f4f4f;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input-box input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.button-container{
+    margin: 15px 0;
+}
+
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #c29dec;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgba#8346e6,#420cd8);
+}
+.button-container button:hover{
+    background-image: linear-gradient(to right, #420cd8, #8346e6);
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form action="conexionmaes.php" name="alumnos" method="post">
+            <h2>REGISTRO</h2>
+            <div class="content">
+            
+
+                <div class="input-box">
+                    <label for="nombre">nombre</label>
+                    <input type="text" placeholder="ingresa tu nombre" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="Apellidos">Apellidos</label>
+                    <input type="text" placeholder="ingresa tu apellido" name="uname" required>
+                </div>
+                <div class="input-box">
+                    <label for="materia que asigna">materia que asigna</label>
+                    <input type="text" placeholder="ingrese la materia que asigna" name="mtraig" required>
+                <div class="input-box">
+                    <label for="fecha">fecha</label>
+                    <input type="date" placeholder="Enter birth date" name="fcha" required>
+                </div>
+                    <div class="button-container">
+                        <button type="submit">registro</button>
+                        <button type="submit">reset</button>
+                    </div>
+            </div>
+        </form>
+    </div>
+    
+
+</body>
+</html>
